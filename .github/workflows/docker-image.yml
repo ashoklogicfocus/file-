@@ -16,8 +16,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: |
-          echo "${{ secrets.DOCKERPW }}" | docker login -u "webmagic1" --password-stdin
-          docker image build -t webmagic1/flaskapp:v1 .
+          echo "${{ secrets.DOCKERPW }}" | docker login -u "webmagic" --password-stdin
+          docker image build -t webmagic/flaskapp:v1 .
           docker push webmagic1/flaskapp:v1
  
       
