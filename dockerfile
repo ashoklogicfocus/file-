@@ -10,8 +10,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-
-LABLE maintainer= "WebMagic Informatica <informatica.com>"\
+ maintainer= "WebMagic Informatica <informatica.com>"\
 			Version="1.0"
 
 
