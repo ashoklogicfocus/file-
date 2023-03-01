@@ -11,7 +11,7 @@ RUN pip install
 
 COPY . .
 
-LABLE maintainer= "WebMagic Informatica <informatica.com>"\
+LABLE maintainer= "Hello From WebMagic Informatica <informatica.com>"\
 			Version="1.0"
 
 
