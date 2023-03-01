@@ -3,7 +3,8 @@ FROM python:2.7-alpine
 
 RUN mkdir /app
 WORKDIR /app
-COPY requirments.txt 
+COPY requirments.txt
+COPY --chown=node:node . .
 RUN pip install -r requirements.txt
 
 
