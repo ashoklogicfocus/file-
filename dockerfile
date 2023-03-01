@@ -3,9 +3,9 @@ FROM python:alpine
 
 
 WORKDIR /app
-COPY requirments.txt .
+COPY requirments.txt -r requirments.txt .
 
-RUN pip install -r requirments.txt
+RUN pip install 
 
 
 COPY . .
