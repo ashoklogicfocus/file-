@@ -1,10 +1,10 @@
 FROM node:alpine
 
 WORKDIR /app
-COPY package.json . 
+COPY requirements.txt . 
 
-RUN npm install
+RUN pip install
 
 COPY . .
 
-CMD ["npm", "start"]
+CMD ["pip", "start"]
