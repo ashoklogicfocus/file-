@@ -1,10 +1,18 @@
-FROM node:alpine
 
+FROM python:2.7-alpine
+
+RUN mkdir /app
 WORKDIR /app
-COPY requirements.txt . 
+COPY requirments.txt 
 
-RUN pip install
+RUN pip install -r requirements.txt
+
 
 COPY . .
 
-CMD ["pip", "start"]
+LABLE maintainer= "WebMagic Informatica <informatica.com>"\
+			Version="1.0"
+
+
+CMD flask run --host=0.0.0.0 --port=5000
+
