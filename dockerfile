@@ -3,14 +3,14 @@ FROM python:2.7-alpine
 
 RUN mkdir /app
 WORKDIR /app
-COPY requirments.txt requirments.txt
+COPY requirments.txt r
 
 RUN pip install -r requirements.txt
 
 
 COPY . .
 
-RUN maintainer= "WebMagic Informatica <informatica.com>"\
+LABLE maintainer= "WebMagic Informatica <informatica.com>"\
 			Version="1.0"
 
 
