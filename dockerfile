@@ -5,7 +5,7 @@ FROM python:alpine
 WORKDIR /app
 COPY requirments.txt .
 
-RUN pip install 
+RUN pip install -r requirments.txt
 
 
 COPY . .
