@@ -1,4 +1,4 @@
-FROM jfloff/alpine-python:3.4-onbuild
+FROM alpine-python:3.4-onbuild
 
 # for a flask server
 EXPOSE 5000
