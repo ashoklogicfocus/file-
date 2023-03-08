@@ -19,6 +19,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push
         uses: docker/build-push-action@v2
-      - run: pip install 
+      - name: Install dependencies
+        run: pip ci
+           
         
         
