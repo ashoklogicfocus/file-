@@ -1,20 +1,12 @@
 
 
+
+
 FROM python:2.7-alpine
-
-RUN mkdir /app
+RUN apk add --update python
 WORKDIR /app
-COPY requirments.txt .
-
-RUN pip install -r requirments.txt 
-
-
+COPY requirments.txt ./
+RUN pip install
 COPY . .
-
-LABEL maintainer= "WebMagic Informatica <informatica.com>"\
-			Version="1.0"
-
-
-CMD flask --host=0.0.0.0 --port=5000
-
-
+EXPOSE 5000
+CMD ["pip", "flask"]
