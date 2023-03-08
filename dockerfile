@@ -1,9 +1,5 @@
-FROM python:2.7-alpine
-RUN apk add --update python
-WORKDIR /app
-COPY requirments.txt .
+FROM jfloff/alpine-python:3.4-onbuild
 
-RUN pip install -r requirments.txt  
-COPY ..
+# for a flask server
 EXPOSE 5000
-CMD ["pip"]
+CMD python manage.pip runserver
